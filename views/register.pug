@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  section.auth-box
+    form.auth-form(action='/users/register', method="post")
+      h2 Register form
+      fieldset
+        label(for='username')
+          input(type='text', name="username" , placeholder='username')
+      fieldset
+        label(for='password')
+          input(type='password', name="password" placeholder='password')
+      fieldset
+        label(for='repeatPass')
+          input(type='password', name="repeatPass" placeholder='repeat password')
+      fieldset
+        input(type='submit',value='Register')

@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/jquery-textarea.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Titillium+Web')
+    link(rel='stylesheet', href='/bower_components/components-font-awesome/css/font-awesome.min.css')
+  body
+
+    include nav
+
+    if error_msg
+      span.error= error_msg
+
+    if errors
+      each error in errors
+        span.error= error.msg
+
+    block content
+    
+
+    script(src='/bower_components/jquery/dist/jquery.min.js')
+    script(src='/javascripts/custom.js')
+    script(src='/javascripts/textarea.js')

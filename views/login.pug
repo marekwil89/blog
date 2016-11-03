@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  section.auth-box
+    form.auth-form(action='/users/login', method="post")
+      h2 Login form
+      fieldset
+        label(for='username')
+          input(type='text', name="username" , placeholder='username')
+      fieldset
+        label(for='password')
+          input(type='password', name="password" placeholder='password')
+      fieldset
+        input(type='submit',value='Log in')

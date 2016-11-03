@@ -1,0 +1,71 @@
+.articles-header
+  min-height: 20vh
+  display: flex
+  justify-content: center
+  align-items: center
+
+
+  h2
+    font-size: $font-huge
+    color: $dark-gray
+    letter-spacing: $space-between
+    font-weight: 300
+
+    span
+      color: $main-color
+      font-size: $font-huge
+
+
+
+
+.articles-box
+  display: flex
+  flex-wrap: wrap
+  align-content: flex-start
+
+  a
+    outline: 1px solid $white-color
+    box-sizing: border-box
+    width: 25%
+    height: 350px
+    text-decoration: none
+    position: relative
+    transition: 0.3s all
+    
+    &:hover
+      .overlay
+        background: rgba($light-gray, 0.0)
+
+      p
+        background: $dark-gray
+        color: $white-color
+
+    .overlay
+      position: absolute
+      background: rgba($dark-gray, 0.7)
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0
+      transition: 0.3s all
+
+    p
+      margin: 0
+      position: absolute
+      left: 10px
+      bottom: 10px
+      text-transform: uppercase
+      border-radius: 5px
+      background: $white-color
+      font-size: $font-medium
+      display: inline-block
+      color: $dark-gray
+      padding: 5px 10px
+      letter-spacing: $space-between
+      transition: 0.2s all
+
+
+
+
+
+

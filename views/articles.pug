@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  header.articles-header
+
+    h2
+      span /
+      | articles
+ 
+  section.articles-box
+    each article in articles
+      a(href='/articles/detail/'+article._id).backImage(style='background-image: url(/uploads/'+article.imageName +');')
+        span.overlay
+        p= article.title

@@ -1,0 +1,45 @@
+extends layout
+
+block content
+  header.article-header.backImage(style='background-image: url(/uploads/'+ article.imageName +');')
+
+    div.article-detail
+      time= moment(article.created).format('L')
+      h2= article.title
+
+  section.content-box
+
+    article
+      div.admin-panel
+        a(href='/articles/edit/'+article._id) Edit
+        a(href='/articles/delete/'+article._id) Delete
+
+      p.descr!= article.descr
+      
+
+    aside
+      h2
+        span /
+        | Read more
+
+
+
+
+      //- ul
+      //-   each news in newests
+      //-     li
+      //-       a(href='/articles/detail/'+news._id)= news.title
+
+  //- hr
+  //- form(action='/articles/detail/' + article._id + '/newComment', method="post")
+  //-   fieldset
+  //-     label(for='text')
+  //-       textarea(type='text', name="text" placeholder='text')
+
+  //-   input(type='submit',value='new Comment')
+
+  //- hr
+  //- each comment in article.comments
+  //-   article
+  //-     h3= comment.author
+  //-     p= comment.text

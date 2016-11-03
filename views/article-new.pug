@@ -1,0 +1,29 @@
+extends layout
+
+block content
+
+  - var categories = ['HTML5', 'CSS3', 'javaScript']
+
+  section.article-form
+    h2 Article add new 
+    form(action='/articles/new', method='post' enctype='multipart/form-data')
+      fieldset
+        label(for='title')
+          h3 Title
+          input(type='text', name='title' , placeholder='title')
+      fieldset
+        label(for='file')
+          h3 Background photo
+          input(type='file' name='background')
+      fieldset
+        label(for='descr')
+          h3 Main Description
+          textarea(type='text', name='descr' placeholder='descr')
+      fieldset
+        label(for='categories')
+          h3 Categories
+          select(name='categories' multiple)
+            each category in categories
+              option(value=category) #{category}
+      fieldset
+        input(type='submit',value='Submit')
